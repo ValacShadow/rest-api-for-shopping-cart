@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "b23fb4a3-ec10-454c-99de-2fb46ff6ed19",
+		"name": "shopping cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_name\":\"electronics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/cart/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_name\":\"freeze\",\r\n    \"item_price\":20000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/cart/607c6e64b21ef24febd2cfdc/item/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"607c6e64b21ef24febd2cfdc",
+						"item",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/item/607c6cc11bff2454daa3ce86/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"item",
+						"607c6cc11bff2454daa3ce86",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/cart/607c615045a86d2cc8b53f6c/item",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"607c615045a86d2cc8b53f6c",
+						"item"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
